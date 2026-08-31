@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ClipLoot — Video Downloader</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+
+  <body>
+    <!-- Decorative shapes -->
+    <div class="shape square-one"></div>
+    <div class="shape square-two"></div>
+    <div class="shape circle-one"></div>
+    <div class="shape star">★</div>
+
+    <div class="page">
+      <main class="main-card">
+        <!-- NAVBAR -->
+        <nav class="navbar">
+          <div class="logo">
+            <div class="logo-icon">↓</div>
+            <span>CLIPLOOT</span>
+          </div>
+
+          <div class="nav-buttons">
+            <button class="nav-btn active">Downloader</button>
+            <button class="nav-btn">COPY</button>
+            <button class="nav-btn">PASTE</button>
+          </div>
+        </nav>
+
+        <!-- HERO -->
+        <section class="hero">
+          <div class="badge">✦ COPY • PASTE • DOWNLOAD ✦</div>
+
+          <h1>
+            DOWNLOAD
+            <br />
+            <span>YOUR VIDEO</span>
+          </h1>
+
+          <p>
+            Paste a video link below and download it directly. No complicated
+            steps. Just paste, click and save.
+          </p>
+        </section>
+
+        <!-- DOWNLOADER -->
+        <section class="download-area">
+          <div class="download-card">
+            <form id="downloadForm">
+              <label class="input-label" for="videoUrl"> 🔗 VIDEO URL </label>
+
+              <div class="input-row">
+                <input
+                  type="url"
+                  id="videoUrl"
+                  name="url"
+                  class="url-input"
+                  placeholder="Paste your video URL here..."
+                  autocomplete="off"
+                  required
+                />
+
+                <button type="submit" class="download-btn" id="downloadBtn">
+                  DOWNLOAD ↓
+                </button>
+              </div>
+            </form>
+
+            <!-- STATUS -->
+            <div id="status" class="status"></div>
+
+            <!-- RESULT -->
+            <div id="result" class="result">
+              <div class="result-icon">✓</div>
+
+              <div class="result-title">VIDEO READY!</div>
+
+              <a id="saveBtn" class="save-btn" href="#" download>
+                ⬇ SAVE VIDEO
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section class="features">
+          <div class="feature">
+            <div class="feature-icon">⚡</div>
+
+            <h3>FAST</h3>
+
+            <p>Quick processing powered by our lightweight downloader.</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">◈</div>
+
+            <h3>SIMPLE</h3>
+
+            <p>No confusing menus. Paste your link and download your video.</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">✓</div>
+
+            <h3>EASY TO USE</h3>
+
+            <p>
+              Clean interface designed to work beautifully on desktop and
+              mobile.
+            </p>
+          </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+          <span> © 2026 ClipLoot </span>
+
+          <span class="footer-tag"> ROY TAPOBRATA.</span>
+        </footer>
+      </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
